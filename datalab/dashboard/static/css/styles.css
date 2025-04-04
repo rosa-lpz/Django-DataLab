@@ -1,0 +1,346 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* FLight background */
+}
+
+.sidebar {
+    width: 220px; /* Sidebar width */
+    background-color: #343a40; /* Dark background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;  /* Fixed position so it stays in place */
+    left: 0;  /* Stick to the left side */
+    top: 0;  /* Start from the top */
+    height: 100vh; /* Full height of the viewport */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 12px 15px; /* More vertical space */
+    cursor: pointer;
+    border-bottom: 1px solid #495057; /* Subtle dividing line */
+    transition: background-color 0.3s ease; /* Smooth transition on mouse hover */
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.sidebar li.active {
+    font-weight: bold;
+    color: #00bcd4;  
+    background-color: rgba(0, 188, 212, 0.1);  /* Light blue background for active item */
+}
+
+.sidebar li:hover {
+    background-color: #495057;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-left: 250px; /* Push the content to the right to avoid overlap */        
+}
+
+.main-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* DATASETS Section ---------------------------------------*/
+/* File Upload */
+#datasets-section input[type="file"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#datasets-section button {
+    padding: 10px 15px;
+    background-color: #007bff;  /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#datasets-section button:hover {
+    background-color: #0056b3;
+}
+
+#datasets-section h3 {
+    margin-top: 30px;
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+} 
+
+/* List of datasets table */
+#datasets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-radius: 4px;
+    overflow: hidden; /* For the rounded border to work on the datasets table */
+}
+
+#datasets-table th, #datasets-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    background-color: white; /* White background for dataset table cells */
+}
+
+#datasets-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#datasets-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#datasets-table tbody tr:hover {
+    background-color: #e9ecef; /* Light gray on mouseover */
+}
+
+/* DATA PREVIEW Section -----------------------------------------------------*/
+/* Dataset Table */
+#data-preview-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#data-preview-section th, #data-preview-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#data-preview-section th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#data-preview-section .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#data-preview-section .pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+#data-preview-section .pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Data Statistics 
+#statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#statistics-table th, #statistics-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#statistics-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}*/
+
+/* DATA VISUALIZATION */
+#visualization-section .chart-options {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#visualization-section .chart-options label {
+    font-weight: bold;
+    color: #555;
+}
+
+#visualization-section .chart-options select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#visualization-section .chart-options button {
+    padding: 10px 15px;
+    background-color: #28a745; /* Green button*/
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#visualization-section .chart-options button:hover {
+    background-color: #1e7e34;
+}
+
+#visualization-section .chart-container {
+    width: 100%;
+    height: 350px; /* Should be adjusted as needed */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#chart-container {
+    width: 90vw; /* Take 90% of the screen width */
+    height: 70vh; /* Take 70% of the screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg {
+    background-color: #f8f9fa; /* Light background */
+}
+.line {
+    stroke-width: 3;
+}
+
+/* NOTEBOOKS   */
+#notebook-section input[type="file"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#notebook-section button {
+    padding: 10px 15px;
+    background-color: #6c757d; /* Gray button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+#notebook-section button:hover {
+    background-color: #5a6268;
+}
+
+#notebook-section #notebook-viewer {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#notebook-section textarea {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+}
+
+#notebook-section #notebook-viewer button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue button to Execute */
+    color: white;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#notebook-section #notebook-viewer button:hover {
+    background-color: #0056b3;
+}
+
+/* D3 Styling (basic) */
+.bar {
+    fill: steelblue;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #333;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 10px;
+}
+
+.dot {
+    fill: steelblue;
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
