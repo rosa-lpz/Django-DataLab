@@ -7,5 +7,5 @@ Basic Analytics Website in Django that allows users to upload a CSV file, displa
 1. Allow CSV file upload.
 2. Read and display the content of the CSV as a table.
 3. Show basic statistics about the data, such as counts, averages, min/max values, etc.
-
-[image](https://github.com/rosa-lpz/Django-DataLab/blob/main/DataLab-img.gif)
+ 
+![image](DataLab-img.gif)
