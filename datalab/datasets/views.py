@@ -1,16 +1,17 @@
 from django.shortcuts import render
-#from .models import Dataset
+from .models import Dataset
 #from .forms import DatasetForm
-"""
+
 # The home page for Datasets
 def datasets_index(request):
     return render(request, 'datasets/datasets.html') 
 
-Show all datasets
-def datasets(request):
-    datasets = Topic.objects.order_by('date_added')
+
+# Show all datasets
+def render_datasets(request):
+    datasets = Dataset.objects.all() #order_by('date_added')
     context = {'datasets':datasets}
-    return render(request, 'datasets/datasets.html', context)"""
+    return render(request, 'datasets/datasets.html', context) 
 
 """
 Show a single dataset in a table

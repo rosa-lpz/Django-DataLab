@@ -1,7 +1,9 @@
 <div class="sidebar">
 	<h2>Data Lab</h2>
 	<ul>
-		<li data-section="datasets" class="active">Datasets</li>
+		<li data-section="datasets" class="active">
+			<a href="{% url 'datasets:datasets' %}">Datasets</a>
+		</li>
 		<li data-section="data-preview">Data Preview</li>
 		<li data-section="visualize-data">Data Visualization</li>
 		<li data-section="notebook">Notebook</li>

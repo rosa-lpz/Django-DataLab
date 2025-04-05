@@ -25,8 +25,9 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('datasets/', include('datasets.urls')),  # Include datasets URLs
     #path('users/', include('users.urls')),
-    #path('datasets/', include('datasets.urls')),
+    
     
     #path('dataprocessing/', include('dataprocessing.urls')),
     #path('dataviz/', include('dataviz.urls')),

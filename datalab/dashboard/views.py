@@ -10,4 +10,4 @@ def index(request):
     """recent_datasets = Dataset.objects.all().order_by('-date_added')[1:6]  # Get the next 5 recent posts
     context= {'datasets':datasets,
         'recent_datasets': recent_datasets}"""
-    return render(request, 'dashboard/index.html')
+    return render(request, 'dashboard/index.html', context)
